@@ -10,7 +10,7 @@
 			"name": "interpost",
 			"item": [
 				{
-					"name": "interpost_informations",
+					"name": "informations",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -45,7 +45,7 @@
 					"response": []
 				},
 				{
-					"name": "interpost_shipment",
+					"name": "shipment",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -69,21 +69,21 @@
 							}
 						},
 						"url": {
-							"raw": "{{interpostUrl}}/interthaipost/v1/shipment",
+							"raw": "{{interpostUrl}}/v1/shipment",
 							"host": [
 								"{{interpostUrl}}"
 							],
 							"path": [
-								"interthaipost",
 								"v1",
 								"shipment"
 							]
-						}
+						},
+						"description": "<img src=\"https://content.pstmn.io/66854df6-7928-49d9-8039-44a27098e5fc/aW1hZ2UucG5n\" width=\"346\" height=\"155\">\n\nlabel result\n\n<img src=\"https://content.pstmn.io/8aaf6e1e-2234-4504-b5f8-10150edd114c/aW1hZ2UucG5n\" alt=\"\" height=\"1336\" width=\"1610\">"
 					},
 					"response": []
 				},
 				{
-					"name": "interpost_services",
+					"name": "services",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -98,7 +98,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{interpostUrl}}/v1/services?cId=TH&weight=10",
+							"raw": "{{interpostUrl}}/v1/services?cId=JP&weight=10",
 							"host": [
 								"{{interpostUrl}}"
 							],
@@ -109,7 +109,7 @@
 							"query": [
 								{
 									"key": "cId",
-									"value": "TH",
+									"value": "JP",
 									"description": "required"
 								},
 								{
@@ -124,7 +124,7 @@
 					"response": []
 				},
 				{
-					"name": "interpost_country",
+					"name": "country",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -139,7 +139,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{interpostUrl}}/v1/country?page_no=1&page_size=200",
+							"raw": "{{interpostUrl}}/v1/country?country_name_en=Singapore&page_no=1&page_size=200",
 							"host": [
 								"{{interpostUrl}}"
 							],
@@ -150,18 +150,17 @@
 							"query": [
 								{
 									"key": "id",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "country_code",
-									"value": null,
+									"value": "SG",
 									"disabled": true
 								},
 								{
 									"key": "country_name_en",
-									"value": null,
-									"disabled": true
+									"value": "Singapore"
 								},
 								{
 									"key": "page_no",
@@ -178,7 +177,7 @@
 					"response": []
 				},
 				{
-					"name": "interpost_state",
+					"name": "state",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -193,7 +192,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{interpostUrl}}/v1/state?page_no=1&page_size=200",
+							"raw": "{{interpostUrl}}/v1/state?country_code=SG&page_no=1&page_size=200",
 							"host": [
 								"{{interpostUrl}}"
 							],
@@ -209,7 +208,7 @@
 								},
 								{
 									"key": "name",
-									"value": "Argentina",
+									"value": "",
 									"disabled": true
 								},
 								{
@@ -219,8 +218,7 @@
 								},
 								{
 									"key": "country_code",
-									"value": "TH30110",
-									"disabled": true
+									"value": "SG"
 								},
 								{
 									"key": "page_no",
@@ -237,7 +235,7 @@
 					"response": []
 				},
 				{
-					"name": "interpost_city",
+					"name": "city",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -252,7 +250,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{interpostUrl}}/v1/city?page_no=1&page_size=200",
+							"raw": "{{interpostUrl}}/v1/city?country_code=SG&page_no=1&page_size=200",
 							"host": [
 								"{{interpostUrl}}"
 							],
@@ -263,33 +261,32 @@
 							"query": [
 								{
 									"key": "id",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "name",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "state_id",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "state_code",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "country_id",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "country_code",
-									"value": null,
-									"disabled": true
+									"value": "SG"
 								},
 								{
 									"key": "page_no",
@@ -306,7 +303,7 @@
 					"response": []
 				},
 				{
-					"name": "interpost_postcode",
+					"name": "postcode",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -328,9 +325,8 @@
 							},
 							{
 								"key": "country_code",
-								"value": "",
-								"type": "text",
-								"disabled": true
+								"value": "SG",
+								"type": "text"
 							},
 							{
 								"key": "postcode",
@@ -364,7 +360,7 @@
 							},
 							{
 								"key": "short_country",
-								"value": "",
+								"value": "SG",
 								"type": "text",
 								"disabled": true
 							},
@@ -405,7 +401,7 @@
 					"response": []
 				},
 				{
-					"name": "interpost_product",
+					"name": "product",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -420,7 +416,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{interpostUrl}}/v1/product?page_no=1&page_size=20",
+							"raw": "{{interpostUrl}}/v1/product?HSCODE_ID=1782&page_no=1&page_size=20",
 							"host": [
 								"{{interpostUrl}}"
 							],
@@ -436,8 +432,7 @@
 								},
 								{
 									"key": "HSCODE_ID",
-									"value": "0",
-									"disabled": true
+									"value": "1782"
 								},
 								{
 									"key": "VALUE",
@@ -446,12 +441,12 @@
 								},
 								{
 									"key": "CODE",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "DESCRIPTION",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
@@ -465,6 +460,76 @@
 							]
 						},
 						"description": "<img src=\"https://content.pstmn.io/3f7d4982-9f8b-42f2-85c4-2d8af047650c/aW1hZ2UucG5n\" alt=\"\" height=\"96\" width=\"1094\">"
+					},
+					"response": []
+				},
+				{
+					"name": "fee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{interpostUrl}}/v1/fee?serviceId=*&weight=0.1&country=JP",
+							"host": [
+								"{{interpostUrl}}"
+							],
+							"path": [
+								"v1",
+								"fee"
+							],
+							"query": [
+								{
+									"key": "serviceId",
+									"value": "*"
+								},
+								{
+									"key": "weight",
+									"value": "0.1"
+								},
+								{
+									"key": "country",
+									"value": "JP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{interpostUrl}}/v1/categories",
+							"host": [
+								"{{interpostUrl}}"
+							],
+							"path": [
+								"v1",
+								"categories"
+							]
+						}
 					},
 					"response": []
 				}
@@ -707,7 +772,7 @@
 							"response": []
 						},
 						{
-							"name": "description",
+							"name": "type",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -737,7 +802,7 @@
 							"response": []
 						},
 						{
-							"name": "parcel category",
+							"name": "size",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -801,7 +866,7 @@
 									"variable": [
 										{
 											"key": "order_pacel_id",
-											"value": "9c0c7478-4af0-4ac5-9174-86c57a55eb55"
+											"value": "f078ef52-519e-4f17-87e1-fc5d11340b35"
 										}
 									]
 								}
@@ -863,6 +928,45 @@
 					"name": "order",
 					"item": [
 						{
+							"name": "create order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sender_name\": \"string\",\n    \"sender_mobile\": \"string\",\n    \"sender_address\": \"string\",\n    \"sender_district_id\": \"string\",\n    \"sender_postcode\": \"string\",\n    \"sender_identify\": \"string\",\n    \"recipient\": [\n        {\n            \"courier_code\": \"string\",\n            \"recipient_name\": \"string\",\n            \"recipient_mobile\": \"string\",\n            \"recipient_address\": \"string\",\n            \"recipient_district_id\": \"string\",\n            \"recipient_postcode\": \"string\",\n            \"note\": \"string\",\n            \"box\": {\n                \"width\": \"string\",\n                \"length\": \"string\",\n                \"height\": \"string\",\n                \"weight\": \"string\"\n            },\n            \"item_description\": \"string\",\n            \"parcel_type_id\": \"string\",\n            \"parcel_size_id\": \"string\",\n            \"freezer\": false,\n            \"cod\": false,\n            \"cod_value\": 0,\n            \"insurance\": true,\n            \"insurance_declare\": \"string\",\n            \"insurance_type\": \"string\",\n            \"consignment_no\": \"string\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{merchantUrl}}/v1/order/create/parcel",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"order",
+										"create",
+										"parcel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "order information",
 							"request": {
 								"auth": {
@@ -898,7 +1002,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"description": "<img src=\"https://content.pstmn.io/3f9f451a-0036-4f9e-8294-b20edb898e66/aW1hZ2UucG5n\" alt=\"\" height=\"1012\" width=\"1138\">"
 				},
 				{
 					"name": "zipcode",
@@ -963,6 +1068,93 @@
 											"key": "search",
 											"value": "30110",
 											"description": "required"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "coupon",
+					"item": [
+						{
+							"name": "coupon",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/coupon/:mobile",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"coupon",
+										":mobile"
+									],
+									"variable": [
+										{
+											"key": "mobile",
+											"value": "0923152166"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"mobile\": \"0923152166\",\n  \"coupon_code\": \"xxx\",\n  \"order_id\": [\n    \"1\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{merchantUrl}}/v1/coupon/:mobile",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"coupon",
+										":mobile"
+									],
+									"variable": [
+										{
+											"key": "mobile",
+											"value": ""
 										}
 									]
 								}
@@ -1038,6 +1230,35 @@
 								"product",
 								"category",
 								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bank",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{merchantUrl}}/v1/service/bank",
+							"host": [
+								"{{merchantUrl}}"
+							],
+							"path": [
+								"v1",
+								"service",
+								"bank"
 							]
 						}
 					},
