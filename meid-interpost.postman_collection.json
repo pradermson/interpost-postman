@@ -1,16 +1,492 @@
 {
 	"info": {
 		"_postman_id": "41a4e5e5-afcf-4f93-8e71-8c6e49fa5196",
-		"name": "meid-interpost",
+		"name": "MeID API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33006207"
 	},
 	"item": [
 		{
-			"name": "interpost",
+			"name": "InterThai Post API",
 			"item": [
 				{
-					"name": "informations",
+					"name": "MasterData",
+					"item": [
+						{
+							"name": "country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{interpostUrl}}/v1/country?id=1",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"country"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "country_code",
+											"value": "AD",
+											"disabled": true
+										},
+										{
+											"key": "country_name_en",
+											"value": "Singapore",
+											"disabled": true
+										},
+										{
+											"key": "page_no",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "300",
+											"disabled": true
+										}
+									]
+								},
+								"description": "<img src=\"https://content.pstmn.io/14822f42-092a-49d1-bba4-2f1c5b6acf15/aW1hZ2UucG5n\" alt=\"\" height=\"98\" width=\"750\">"
+							},
+							"response": []
+						},
+						{
+							"name": "state",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{interpostUrl}}/v1/state?country_id=1",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"state"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "country_id",
+											"value": "1"
+										},
+										{
+											"key": "country_code",
+											"value": "AF",
+											"disabled": true
+										},
+										{
+											"key": "page_no",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "200",
+											"disabled": true
+										}
+									]
+								},
+								"description": "<img src=\"https://content.pstmn.io/0a586485-631d-4477-ab73-04704fac79da/aW1hZ2UucG5n\" alt=\"\" height=\"100\" width=\"758\">"
+							},
+							"response": []
+						},
+						{
+							"name": "city",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{interpostUrl}}/v1/city?state_id=3870",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"city"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "state_id",
+											"value": "3870"
+										},
+										{
+											"key": "state_code",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "country_id",
+											"value": "193",
+											"disabled": true
+										},
+										{
+											"key": "country_code",
+											"value": "SG",
+											"disabled": true
+										},
+										{
+											"key": "page_no",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "200",
+											"disabled": true
+										}
+									]
+								},
+								"description": "<img src=\"https://content.pstmn.io/1cf35e3a-ea7c-4008-a8e3-5291c38bea25/aW1hZ2UucG5n\" alt=\"\" height=\"102\" width=\"750\">"
+							},
+							"response": []
+						},
+						{
+							"name": "postcode",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{interpostUrl}}/v1/postcode?country=Andorra&page_size=-1",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"postcode"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "country_code",
+											"value": "AD",
+											"description": "get country",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Encamp",
+											"description": "get city",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "Encamp",
+											"description": "get state",
+											"disabled": true
+										},
+										{
+											"key": "short_state",
+											"value": "3870",
+											"disabled": true
+										},
+										{
+											"key": "country",
+											"value": "Andorra"
+										},
+										{
+											"key": "short_country",
+											"value": "AF",
+											"disabled": true
+										},
+										{
+											"key": "page_no",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "-1"
+										},
+										{
+											"key": "community",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "short_community",
+											"value": "SG",
+											"disabled": true
+										},
+										{
+											"key": "postcode",
+											"value": "%200%",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InterThaiPost",
+					"item": [
+						{
+							"name": "Shipment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"service\": \"2573\",\n    \"items\": [\n        {\n            \"itemId\": \"test1\",\n            \"barcode\": \"string\",\n            \"insurance\": false,\n            \"categoryItem\": \"other\",\n            \"other\": \"test\",\n            \"weight\": 100,\n            \"quantity\": 1,\n            \"price\": 100,\n            \"sender\": {\n                \"name\": \"namesend\",\n                \"ioss_number\": \"string\",\n                \"tel\": \"0888888888\",\n                \"email\": \"test@gmail.com\",\n                \"address\": {\n                    \"addition\": \"1234\",\n                    \"premises\": \"string\",\n                    \"street\": \"Rama 2\",\n                    \"subDistrict\": \"Sam Dam\",\n                    \"district\": \"Bang Khun Thien\",\n                    \"province\": \"Bangkok\",\n                    \"country\": \"THAILAND\",\n                    \"postalCode\": \"10150\",\n                    \"countryCode\": \"TH\"\n                }\n            },\n            \"receiver\": {\n                \"name\": \"test\",\n                \"tel\": \"0888888888\",\n                \"email\": \"test@gmail.com\",\n                \"address\": {\n                    \"addition\": \"string\",\n                    \"premises\": \"string\",\n                    \"city\": \"string\",\n                    \"state\": \"string\",\n                    \"postalCode\": \"string\",\n                    \"country\": \"JAPAN\",\n                    \"countryCode\": \"JP\"\n                }\n            },\n            \"forward\": {\n                \"name\": \"string\",\n                \"tel\": \"string\",\n                \"address\": {\n                    \"premises\": \"string\"\n                }\n            },\n            \"contentPieces\": [\n                {\n                    \"desc\": \"string\",\n                    \"amount\": 1,\n                    \"currency\": \"THB\",\n                    \"netWeight\": 100,\n                    \"unit\": \"1\",\n                    \"originalLocation\": \"TH\",\n                    \"tariff\": \"300490\"\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{interpostUrl}}/v1/shipment",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"shipment"
+									]
+								},
+								"description": "<img src=\"https://content.pstmn.io/66854df6-7928-49d9-8039-44a27098e5fc/aW1hZ2UucG5n\" width=\"346\" height=\"155\">\n\nlabel result\n\n<img src=\"https://content.pstmn.io/8aaf6e1e-2234-4504-b5f8-10150edd114c/aW1hZ2UucG5n\" alt=\"\" height=\"1336\" width=\"1610\">"
+							},
+							"response": []
+						},
+						{
+							"name": "Services",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{interpostUrl}}/v1/services?cId=JP&weight=10",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"services"
+									],
+									"query": [
+										{
+											"key": "cId",
+											"value": "JP",
+											"description": "required"
+										},
+										{
+											"key": "weight",
+											"value": "10",
+											"description": "required"
+										}
+									]
+								},
+								"description": "<img src=\"https://content.pstmn.io/55186736-8ad5-49f7-a593-141eb6e0672e/U2NyZWVuc2hvdCAyMDI0LTA0LTMwIGF0IDEzLjI2LjAzLnBuZw==\" alt=\"\">"
+							},
+							"response": []
+						},
+						{
+							"name": "Fee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{interpostUrl}}/v1/fee?serviceId=*&weight=0.1&country=JP",
+									"host": [
+										"{{interpostUrl}}"
+									],
+									"path": [
+										"v1",
+										"fee"
+									],
+									"query": [
+										{
+											"key": "serviceId",
+											"value": "*"
+										},
+										{
+											"key": "weight",
+											"value": "0.1"
+										},
+										{
+											"key": "country",
+											"value": "JP"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var resp = pm.response.json()",
+									"pm.environment.set(\"accessToken\", resp.data.access_token);",
+									"pm.environment.set(\"refreshToken\", resp.data.refresh_token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"greatkub\",\n  \"password\": \"1q2w3e4r\",\n  \"site_code\": \"SSM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{interpostUrl}}/v1/token",
+							"host": [
+								"{{interpostUrl}}"
+							],
+							"path": [
+								"v1",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{interpostUrl}}/v1/categories",
+							"host": [
+								"{{interpostUrl}}"
+							],
+							"path": [
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Information",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -45,363 +521,7 @@
 					"response": []
 				},
 				{
-					"name": "shipment",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"service\": \"2573\",\n    \"items\": [\n        {\n            \"itemId\": \"test1\",\n            \"barcode\": \"string\",\n            \"insurance\": false,\n            \"categoryItem\": \"other\",\n            \"other\": \"test\",\n            \"weight\": 100,\n            \"quantity\": 1,\n            \"price\": 100,\n            \"sender\": {\n                \"name\": \"namesend\",\n                \"ioss_number\": \"string\",\n                \"tel\": \"0888888888\",\n                \"email\": \"test@gmail.com\",\n                \"address\": {\n                    \"addition\": \"1234\",\n                    \"premises\": \"string\",\n                    \"street\": \"Rama 2\",\n                    \"subDistrict\": \"Sam Dam\",\n                    \"district\": \"Bang Khun Thien\",\n                    \"province\": \"Bangkok\",\n                    \"country\": \"THAILAND\",\n                    \"postalCode\": \"10150\",\n                    \"countryCode\": \"TH\"\n                }\n            },\n            \"receiver\": {\n                \"name\": \"test\",\n                \"tel\": \"0888888888\",\n                \"email\": \"test@gmail.com\",\n                \"address\": {\n                    \"addition\": \"string\",\n                    \"premises\": \"string\",\n                    \"city\": \"string\",\n                    \"state\": \"string\",\n                    \"postalCode\": \"string\",\n                    \"country\": \"JAPAN\",\n                    \"countryCode\": \"JP\"\n                }\n            },\n            \"forward\": {\n                \"name\": \"string\",\n                \"tel\": \"string\",\n                \"address\": {\n                    \"premises\": \"string\"\n                }\n            },\n            \"contentPieces\": [\n                {\n                    \"desc\": \"string\",\n                    \"amount\": 1,\n                    \"currency\": \"THB\",\n                    \"netWeight\": 100,\n                    \"unit\": \"1\",\n                    \"originalLocation\": \"TH\",\n                    \"tariff\": \"300490\"\n                }\n            ]\n        }\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{interpostUrl}}/v1/shipment",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"shipment"
-							]
-						},
-						"description": "<img src=\"https://content.pstmn.io/66854df6-7928-49d9-8039-44a27098e5fc/aW1hZ2UucG5n\" width=\"346\" height=\"155\">\n\nlabel result\n\n<img src=\"https://content.pstmn.io/8aaf6e1e-2234-4504-b5f8-10150edd114c/aW1hZ2UucG5n\" alt=\"\" height=\"1336\" width=\"1610\">"
-					},
-					"response": []
-				},
-				{
-					"name": "services",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/services?cId=JP&weight=10",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"services"
-							],
-							"query": [
-								{
-									"key": "cId",
-									"value": "JP",
-									"description": "required"
-								},
-								{
-									"key": "weight",
-									"value": "10",
-									"description": "required"
-								}
-							]
-						},
-						"description": "<img src=\"https://content.pstmn.io/55186736-8ad5-49f7-a593-141eb6e0672e/U2NyZWVuc2hvdCAyMDI0LTA0LTMwIGF0IDEzLjI2LjAzLnBuZw==\" alt=\"\">"
-					},
-					"response": []
-				},
-				{
-					"name": "country",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/country?country_name_en=Singapore&page_no=1&page_size=200",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"country"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "country_code",
-									"value": "SG",
-									"disabled": true
-								},
-								{
-									"key": "country_name_en",
-									"value": "Singapore"
-								},
-								{
-									"key": "page_no",
-									"value": "1"
-								},
-								{
-									"key": "page_size",
-									"value": "200"
-								}
-							]
-						},
-						"description": "<img src=\"https://content.pstmn.io/14822f42-092a-49d1-bba4-2f1c5b6acf15/aW1hZ2UucG5n\" alt=\"\" height=\"98\" width=\"750\">"
-					},
-					"response": []
-				},
-				{
-					"name": "state",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/state?country_code=SG&page_no=1&page_size=200",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"state"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "0",
-									"disabled": true
-								},
-								{
-									"key": "name",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "country_id",
-									"value": "0",
-									"disabled": true
-								},
-								{
-									"key": "country_code",
-									"value": "SG"
-								},
-								{
-									"key": "page_no",
-									"value": "1"
-								},
-								{
-									"key": "page_size",
-									"value": "200"
-								}
-							]
-						},
-						"description": "<img src=\"https://content.pstmn.io/0a586485-631d-4477-ab73-04704fac79da/aW1hZ2UucG5n\" alt=\"\" height=\"100\" width=\"758\">"
-					},
-					"response": []
-				},
-				{
-					"name": "city",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/city?country_code=SG&page_no=1&page_size=200",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"city"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "name",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "state_id",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "state_code",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "country_id",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "country_code",
-									"value": "SG"
-								},
-								{
-									"key": "page_no",
-									"value": "1"
-								},
-								{
-									"key": "page_size",
-									"value": "200"
-								}
-							]
-						},
-						"description": "<img src=\"https://content.pstmn.io/1cf35e3a-ea7c-4008-a8e3-5291c38bea25/aW1hZ2UucG5n\" alt=\"\" height=\"102\" width=\"750\">"
-					},
-					"response": []
-				},
-				{
-					"name": "postcode",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "id",
-								"value": "0",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "country_code",
-								"value": "SG",
-								"type": "text"
-							},
-							{
-								"key": "postcode",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "city",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "state",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "short_state",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "country",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "short_country",
-								"value": "SG",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "community",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "short_community",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "page_no",
-								"value": "1",
-								"type": "text"
-							},
-							{
-								"key": "page_size",
-								"value": "20",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/postcode",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"postcode"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "product",
+					"name": "Product",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -462,84 +582,656 @@
 						"description": "<img src=\"https://content.pstmn.io/3f7d4982-9f8b-42f2-85c4-2d8af047650c/aW1hZ2UucG5n\" alt=\"\" height=\"96\" width=\"1094\">"
 					},
 					"response": []
-				},
-				{
-					"name": "fee",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/fee?serviceId=*&weight=0.1&country=JP",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"fee"
-							],
-							"query": [
-								{
-									"key": "serviceId",
-									"value": "*"
-								},
-								{
-									"key": "weight",
-									"value": "0.1"
-								},
-								{
-									"key": "country",
-									"value": "JP"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "categories",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{interpostUrl}}/v1/categories",
-							"host": [
-								"{{interpostUrl}}"
-							],
-							"path": [
-								"v1",
-								"categories"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
 		{
-			"name": "merchant",
+			"name": "Merchant API",
 			"item": [
 				{
-					"name": "invoice",
+					"name": "Addressbook",
+					"item": [
+						{
+							"name": "search",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/addressbook/search?keyword=TEST",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"addressbook",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "TEST"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mobile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/addressbook/search/mobile/:phone_no",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"addressbook",
+										"search",
+										"mobile",
+										":phone_no"
+									],
+									"variable": [
+										{
+											"key": "phone_no",
+											"value": "0939824982"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/status",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var resp = pm.response.json()",
+											"pm.environment.set(\"accessToken\", resp.data.access_token);",
+											"pm.environment.set(\"refreshToken\", resp.data.refresh_token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"greatkub\",\n  \"password\": \"1q2w3e4r\",\n  \"site_code\": \"SSM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{merchantUrl}}/v1/login",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"accessToken\",null)"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/logout",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CoD Service",
+					"item": [
+						{
+							"name": "search",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/cod/search/:mobile",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"cod",
+										"search",
+										":mobile"
+									],
+									"variable": [
+										{
+											"key": "mobile",
+											"value": "0923152166"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coupon",
+					"item": [
+						{
+							"name": "coupon",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/coupon/:mobile",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"coupon",
+										":mobile"
+									],
+									"variable": [
+										{
+											"key": "mobile",
+											"value": "0923152166"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"mobile\": \"0923152166\",\n  \"coupon_code\": \"xxx\",\n  \"order_id\": [\n    \"1\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{merchantUrl}}/v1/coupon/validate",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"coupon",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "wallet",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/wallet",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wallet transaction",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/wallet/transaction?merchant_id=3fda1bb7-e750-11ee-ac7a-005056b271df&from=2000-03-15&to=3000-03-15&type=info",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"wallet",
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "merchant_id",
+											"value": "3fda1bb7-e750-11ee-ac7a-005056b271df",
+											"description": "string"
+										},
+										{
+											"key": "from",
+											"value": "2000-03-15",
+											"description": "yyyy-mm-dd"
+										},
+										{
+											"key": "to",
+											"value": "3000-03-15",
+											"description": "yyyy-mm-dd"
+										},
+										{
+											"key": "type",
+											"value": "info"
+										},
+										{
+											"key": "offset",
+											"value": "1",
+											"description": "1:",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "1:200",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "transaction type",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "order product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/order/product",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"order",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order parcel",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/order/parcel",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"order",
+										"parcel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "merchant profile",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "file storage",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "courier profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/courier/profile",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"courier",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "courier config",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/courier/config",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"courier",
+										"config"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "courier config detail",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/courier/config/detail",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"courier",
+										"config",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "CourierConfigDetailID",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "CourierID",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "CourierConfigID",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Files",
+					"item": [
+						{
+							"name": "files",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/files?file_id=1",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"files"
+									],
+									"query": [
+										{
+											"key": "file_id",
+											"value": "1",
+											"description": "required"
+										},
+										{
+											"key": "type",
+											"value": "json",
+											"description": "json or binary",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Forgot Password",
+					"item": []
+				},
+				{
+					"name": "Invoice",
 					"item": [
 						{
 							"name": "print invoice tax by order id",
@@ -612,7 +1304,8 @@
 											"value": "P17143857740001"
 										}
 									]
-								}
+								},
+								"description": "<img src=\"https://content.pstmn.io/4a9dc84f-c37f-4b59-8c8c-2dbbfaf8d7e6/aW1hZ2UucG5n\" alt=\"\" height=\"1264\" width=\"542\">"
 							},
 							"response": []
 						},
@@ -695,8 +1388,355 @@
 					"description": "9c0c7478-4af0-4ac5-9174-86c57a55eb55  \nb6dc722e-9d2a-41e9-82cd-ac022ea423f8  \n629281a4-d747-47fa-8feb-a7550a6daf93  \n3873370e-84a7-4821-b88c-4fe84064a755  \nb5e1b426-4c28-4f78-827d-98ec786470fb  \n28abd84c-cf01-4a2a-9c30-cec1e7cd5864  \n4160907a-5510-4e8d-abac-8cc618207038  \nf078ef52-519e-4f17-87e1-fc5d11340b35\n\n<img src=\"https://content.pstmn.io/b89cd500-faed-41e5-b3a2-969aeee918d5/aW1hZ2UucG5n\" alt=\"\" height=\"198\" width=\"1298\">"
 				},
 				{
-					"name": "parcel",
+					"name": "News",
 					"item": [
+						{
+							"name": "news",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/news",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"news"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search news_id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/news/search/:news_id",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"news",
+										"search",
+										":news_id"
+									],
+									"variable": [
+										{
+											"key": "news_id",
+											"value": "517e308c-2fa7-11ee-8e99-005056b2e4c1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "highlight",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/news/highlight",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"news",
+										"highlight"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "highlight by group id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/news/highlight/:group_news_id",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"news",
+										"highlight",
+										":group_news_id"
+									],
+									"variable": [
+										{
+											"key": "group_news_id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "create order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sender_name\": \"string\",\n    \"sender_mobile\": \"string\",\n    \"sender_address\": \"string\",\n    \"sender_district_id\": \"string\",\n    \"sender_postcode\": \"string\",\n    \"sender_identify\": \"string\",\n    \"recipient\": [\n        {\n            \"courier_code\": \"string\",\n            \"recipient_name\": \"string\",\n            \"recipient_mobile\": \"string\",\n            \"recipient_address\": \"string\",\n            \"recipient_district_id\": \"string\",\n            \"recipient_postcode\": \"string\",\n            \"note\": \"string\",\n            \"box\": {\n                \"width\": \"string\",\n                \"length\": \"string\",\n                \"height\": \"string\",\n                \"weight\": \"string\"\n            },\n            \"item_description\": \"string\",\n            \"parcel_type_id\": \"string\",\n            \"parcel_size_id\": \"string\",\n            \"freezer\": false,\n            \"cod\": false,\n            \"cod_value\": 0,\n            \"insurance\": true,\n            \"insurance_declare\": \"string\",\n            \"insurance_type\": \"string\",\n            \"consignment_no\": \"string\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{merchantUrl}}/v1/order/create/parcel",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"order",
+										"create",
+										"parcel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order information",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/order/Info/:order_id",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"order",
+										"Info",
+										":order_id"
+									],
+									"variable": [
+										{
+											"key": "order_id",
+											"value": "9c0c7478-4af0-4ac5-9174-86c57a55eb55"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "<img src=\"https://content.pstmn.io/3f9f451a-0036-4f9e-8294-b20edb898e66/aW1hZ2UucG5n\" alt=\"\" height=\"1012\" width=\"1138\">"
+				},
+				{
+					"name": "Parcel",
+					"item": [
+						{
+							"name": "type",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/service/parcel/type",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"service",
+										"parcel",
+										"type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "size",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/service/parcel/size",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"service",
+										"parcel",
+										"size"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "summary",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/parcel/summary/:merchant_id",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"parcel",
+										"summary",
+										":merchant_id"
+									],
+									"variable": [
+										{
+											"key": "merchant_id",
+											"value": "3fda1bb7-e750-11ee-ac7a-005056b271df"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/parcel/search/:merchant_id",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"parcel",
+										"search",
+										":merchant_id"
+									],
+									"variable": [
+										{
+											"key": "merchant_id",
+											"value": "3fda1bb7-e750-11ee-ac7a-005056b271df"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
 							"name": "label",
 							"request": {
@@ -772,7 +1812,7 @@
 							"response": []
 						},
 						{
-							"name": "type",
+							"name": "info",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -787,45 +1827,21 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{merchantUrl}}/v1/service/parcel/type",
+									"raw": "{{merchantUrl}}/v1/parcel/info/:parcel_id",
 									"host": [
 										"{{merchantUrl}}"
 									],
 									"path": [
 										"v1",
-										"service",
 										"parcel",
-										"type"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "size",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
+										"info",
+										":parcel_id"
+									],
+									"variable": [
 										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
+											"key": "parcel_id",
+											"value": "9c0c7478-4af0-4ac5-9174-86c57a55eb55"
 										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{merchantUrl}}/v1/service/parcel/size",
-									"host": [
-										"{{merchantUrl}}"
-									],
-									"path": [
-										"v1",
-										"service",
-										"parcel",
-										"size"
 									]
 								}
 							},
@@ -835,7 +1851,116 @@
 					"description": "<img src=\"https://content.pstmn.io/dcf6af14-8826-468e-b980-470256d98c5d/aW1hZ2UucG5n\" alt=\"\" height=\"392\" width=\"1218\">"
 				},
 				{
-					"name": "shipment",
+					"name": "Product",
+					"item": [
+						{
+							"name": "category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/product/category/list",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"product",
+										"category",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/product/list",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"product",
+										"list"
+									],
+									"query": [
+										{
+											"key": "product_category_id",
+											"value": "462d4bba-15da-433e-bc56-0f2b9bed52c7",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Report",
+					"item": []
+				},
+				{
+					"name": "Service",
+					"item": [
+						{
+							"name": "bank",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{merchantUrl}}/v1/service/bank",
+									"host": [
+										"{{merchantUrl}}"
+									],
+									"path": [
+										"v1",
+										"service",
+										"bank"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Shipment",
 					"item": [
 						{
 							"name": "info",
@@ -925,91 +2050,14 @@
 					]
 				},
 				{
-					"name": "order",
-					"item": [
-						{
-							"name": "create order",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sender_name\": \"string\",\n    \"sender_mobile\": \"string\",\n    \"sender_address\": \"string\",\n    \"sender_district_id\": \"string\",\n    \"sender_postcode\": \"string\",\n    \"sender_identify\": \"string\",\n    \"recipient\": [\n        {\n            \"courier_code\": \"string\",\n            \"recipient_name\": \"string\",\n            \"recipient_mobile\": \"string\",\n            \"recipient_address\": \"string\",\n            \"recipient_district_id\": \"string\",\n            \"recipient_postcode\": \"string\",\n            \"note\": \"string\",\n            \"box\": {\n                \"width\": \"string\",\n                \"length\": \"string\",\n                \"height\": \"string\",\n                \"weight\": \"string\"\n            },\n            \"item_description\": \"string\",\n            \"parcel_type_id\": \"string\",\n            \"parcel_size_id\": \"string\",\n            \"freezer\": false,\n            \"cod\": false,\n            \"cod_value\": 0,\n            \"insurance\": true,\n            \"insurance_declare\": \"string\",\n            \"insurance_type\": \"string\",\n            \"consignment_no\": \"string\"\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{merchantUrl}}/v1/order/create/parcel",
-									"host": [
-										"{{merchantUrl}}"
-									],
-									"path": [
-										"v1",
-										"order",
-										"create",
-										"parcel"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "order information",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{merchantUrl}}/v1/order/Info/:order_id",
-									"host": [
-										"{{merchantUrl}}"
-									],
-									"path": [
-										"v1",
-										"order",
-										"Info",
-										":order_id"
-									],
-									"variable": [
-										{
-											"key": "order_id",
-											"value": "9c0c7478-4af0-4ac5-9174-86c57a55eb55"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"description": "<img src=\"https://content.pstmn.io/3f9f451a-0036-4f9e-8294-b20edb898e66/aW1hZ2UucG5n\" alt=\"\" height=\"1012\" width=\"1138\">"
+					"name": "Staff",
+					"item": []
 				},
 				{
-					"name": "zipcode",
+					"name": "Store",
 					"item": [
 						{
-							"name": "zipcode",
+							"name": "revenoes",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -1024,21 +2072,21 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{merchantUrl}}/v1/service/zipcode",
+									"raw": "{{merchantUrl}}/v1/report/revenue",
 									"host": [
 										"{{merchantUrl}}"
 									],
 									"path": [
 										"v1",
-										"service",
-										"zipcode"
+										"report",
+										"revenue"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "zipcode search",
+							"name": "report pos",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -1053,21 +2101,23 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{merchantUrl}}/v1/service/zipcode/search?search=30110",
+									"raw": "{{merchantUrl}}/v1/report/pos?from=2000-01-01&to=2023-12-31",
 									"host": [
 										"{{merchantUrl}}"
 									],
 									"path": [
 										"v1",
-										"service",
-										"zipcode",
-										"search"
+										"report",
+										"pos"
 									],
 									"query": [
 										{
-											"key": "search",
-											"value": "30110",
-											"description": "required"
+											"key": "from",
+											"value": "2000-01-01"
+										},
+										{
+											"key": "to",
+											"value": "2023-12-31"
 										}
 									]
 								}
@@ -1077,85 +2127,48 @@
 					]
 				},
 				{
-					"name": "coupon",
+					"name": "Tracking",
+					"item": []
+				},
+				{
+					"name": "User",
 					"item": [
 						{
-							"name": "coupon",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{merchantUrl}}/v1/coupon/:mobile",
-									"host": [
-										"{{merchantUrl}}"
-									],
-									"path": [
-										"v1",
-										"coupon",
-										":mobile"
-									],
-									"variable": [
-										{
-											"key": "mobile",
-											"value": "0923152166"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "validate",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"mobile\": \"0923152166\",\n  \"coupon_code\": \"xxx\",\n  \"order_id\": [\n    \"1\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
+							"name": "information",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
 									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
 								},
+								"method": "GET",
+								"header": [],
 								"url": {
-									"raw": "{{merchantUrl}}/v1/coupon/:mobile",
+									"raw": "{{merchantUrl}}/v1/user/information",
 									"host": [
 										"{{merchantUrl}}"
 									],
 									"path": [
 										"v1",
-										"coupon",
-										":mobile"
-									],
-									"variable": [
-										{
-											"key": "mobile",
-											"value": ""
-										}
+										"user",
+										"information"
 									]
 								}
 							},
@@ -1164,189 +2177,14 @@
 					]
 				},
 				{
-					"name": "user_information",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var resp = pm.response.json()",
-									"pm.environment.set(\"merchantId\",resp.data.merchant_id)"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{merchantUrl}}/v1/user/information",
-							"host": [
-								"{{merchantUrl}}"
-							],
-							"path": [
-								"v1",
-								"user",
-								"information"
-							]
-						}
-					},
-					"response": []
+					"name": "Wallet",
+					"item": []
 				},
 				{
-					"name": "category",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{merchantUrl}}/v1/product/category/list",
-							"host": [
-								"{{merchantUrl}}"
-							],
-							"path": [
-								"v1",
-								"product",
-								"category",
-								"list"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "bank",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{merchantUrl}}/v1/service/bank",
-							"host": [
-								"{{merchantUrl}}"
-							],
-							"path": [
-								"v1",
-								"service",
-								"bank"
-							]
-						}
-					},
-					"response": []
+					"name": "Wallet Topup",
+					"item": []
 				}
 			]
-		},
-		{
-			"name": "interpost_auth",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var resp = pm.response.json()",
-							"pm.environment.set(\"accessToken\", resp.data.access_token);",
-							"pm.environment.set(\"refreshToken\", resp.data.refresh_token);"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"username\": \"greatkub\",\n  \"password\": \"1q2w3e4r\",\n  \"site_code\": \"SSM\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{interpostUrl}}/v1/token",
-					"host": [
-						"{{interpostUrl}}"
-					],
-					"path": [
-						"v1",
-						"token"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "merchant_auth",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var resp = pm.response.json()",
-							"pm.environment.set(\"accessToken\", resp.data.access_token);",
-							"pm.environment.set(\"refreshToken\", resp.data.refresh_token);"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"username\": \"greatkub\",\n  \"password\": \"1q2w3e4r\",\n  \"site_code\": \"SSM\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{merchantUrl}}/v1/login",
-					"host": [
-						"{{merchantUrl}}"
-					],
-					"path": [
-						"v1",
-						"login"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }
